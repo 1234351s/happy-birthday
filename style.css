@@ -33,7 +33,6 @@ h1 {
 
 .hearts {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -77,72 +76,29 @@ h1 {
   }
 }
 
-.rose {
+.bouquet {
   width: 100px;
   height: 150px;
-  position: relative;
   margin-top: 20px;
-  animation: grow 2s infinite;
+  position: relative;
+  animation: float 2s infinite;
 }
 
-.stem {
-  width: 5px;
-  height: 100px;
-  background-color: green;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.flower {
-  width: 50px;
-  height: 50px;
-  background-color: #ff6f61;
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-45deg);
-  border-radius: 50% 50% 0 0;
-  animation: bloom 2s infinite;
-}
-
-.flower::before,
-.flower::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-color: #ff6f61;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.flower::before {
-  top: -25px;
-  left: 0;
-}
-
-.flower::after {
-  left: 25px;
-  top: 0;
-}
-
-@keyframes grow {
+@keyframes float {
   0%,
   100% {
-    height: 100px;
+    transform: translateY(0);
   }
   50% {
-    height: 120px;
+    transform: translateY(-20px);
   }
 }
 
-@keyframes bloom {
-  0%,
-  100% {
-    transform: translateX(-50%) rotate(-45deg) scale(1);
-  }
-  50% {
-    transform: translateX(-50%) rotate(-45deg) scale(1.2);
-  }
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
 }
