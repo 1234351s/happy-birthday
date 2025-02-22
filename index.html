@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>З Днем народження, Кіра!</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        color: #ff69b4;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #ff6f61;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bear {
+        width: 70px;
+        height: 70px;
+        background-color: brown;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50% 50% 0 0;
+        animation: jumpOut 2s infinite;
+      }
+
+      .bear::before,
+      .bear::after {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-color: brown;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .bear::before {
+        top: -15px;
+        left: -20px;
+      }
+
+      .bear::after {
+        top: -15px;
+        right: -20px;
+      }
+
+      @keyframes jumpOut {
+        0%,
+        100% {
+          bottom: 0;
+        }
+        50% {
+          bottom: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>З Днем народження, Кіра!</h1>
+    <div class="box">
+      <div class="bear"></div>
+    </div>
+  </body>
+</html>
