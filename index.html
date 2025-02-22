@@ -4,85 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>З Днем народження, Кіра!</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-        font-family: "Pacifico", cursive;
-        text-align: center;
-      }
-
-      h1 {
-        color: #ff69b4;
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        animation: colorChange 3s infinite;
-      }
-
-      @keyframes colorChange {
-        0% {
-          color: #ff69b4;
-        }
-        50% {
-          color: #fcb69f;
-        }
-        100% {
-          color: #ff69b4;
-        }
-      }
-
-      .hearts {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .heart {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-        background-color: #ff69b4;
-        position: relative;
-        animation: pulse 1.5s infinite;
-        transform: rotate(-45deg);
-      }
-
-      .heart::before,
-      .heart::after {
-        content: "";
-        width: 50px;
-        height: 50px;
-        background-color: #ff69b4;
-        position: absolute;
-        border-radius: 50%;
-      }
-
-      .heart::before {
-        top: -25px;
-        left: 0;
-      }
-
-      .heart::after {
-        left: 25px;
-        top: 0;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(1) rotate(-45deg);
-        }
-        50% {
-          transform: scale(1.2) rotate(-45deg);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <h1>З Днем народження, Кіра!</h1>
@@ -93,5 +15,10 @@
       <div class="heart"></div>
       <div class="heart"></div>
     </div>
+    <div class="rose">
+      <div class="stem"></div>
+      <div class="flower"></div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
