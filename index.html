@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>З Днем народження, Кіра!</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
       body {
         display: flex;
         flex-direction: column;
@@ -13,7 +14,7 @@
         height: 100vh;
         margin: 0;
         background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-        font-family: Arial, sans-serif;
+        font-family: "Pacifico", cursive;
         text-align: center;
       }
 
@@ -21,63 +22,76 @@
         color: #ff69b4;
         font-size: 2.5em;
         margin-bottom: 20px;
+        animation: colorChange 3s infinite;
       }
 
-      .box {
-        width: 100px;
-        height: 100px;
-        background-color: #ff6f61;
+      @keyframes colorChange {
+        0% {
+          color: #ff69b4;
+        }
+        50% {
+          color: #fcb69f;
+        }
+        100% {
+          color: #ff69b4;
+        }
+      }
+
+      .hearts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .heart {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        background-color: #ff69b4;
         position: relative;
-        overflow: hidden;
+        animation: pulse 1.5s infinite;
+        transform: rotate(-45deg);
       }
 
-      .bear {
-        width: 70px;
-        height: 70px;
-        background-color: brown;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 50% 50% 0 0;
-        animation: jumpOut 2s infinite;
-      }
-
-      .bear::before,
-      .bear::after {
+      .heart::before,
+      .heart::after {
         content: "";
-        width: 25px;
-        height: 25px;
-        background-color: brown;
+        width: 50px;
+        height: 50px;
+        background-color: #ff69b4;
         position: absolute;
         border-radius: 50%;
       }
 
-      .bear::before {
-        top: -15px;
-        left: -20px;
+      .heart::before {
+        top: -25px;
+        left: 0;
       }
 
-      .bear::after {
-        top: -15px;
-        right: -20px;
+      .heart::after {
+        left: 25px;
+        top: 0;
       }
 
-      @keyframes jumpOut {
+      @keyframes pulse {
         0%,
         100% {
-          bottom: 0;
+          transform: scale(1) rotate(-45deg);
         }
         50% {
-          bottom: 150px;
+          transform: scale(1.2) rotate(-45deg);
         }
       }
     </style>
   </head>
   <body>
     <h1>З Днем народження, Кіра!</h1>
-    <div class="box">
-      <div class="bear"></div>
+    <div class="hearts">
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
     </div>
   </body>
 </html>
